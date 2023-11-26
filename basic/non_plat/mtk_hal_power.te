@@ -11,6 +11,9 @@ init_daemon_domain(mtk_hal_power)
 hal_server_domain(mtk_hal_power, hal_power)
 hal_server_domain(mtk_hal_power, hal_wifi)
 
+# Allow mtkpower stub service to call powerhal
+binder_call(mtk_hal_power, hal_power_default)
+
 # sysfs
 allow mtk_hal_power sysfs_devices_system_cpu:file rw_file_perms;
 allow mtk_hal_power sysfs_mtk_core_ctl:dir r_dir_perms;
@@ -21,7 +24,7 @@ allow mtk_hal_power sysfs_mtk_core_ctl:file rw_file_perms;
 allow mtk_hal_power proc_thermal:file rw_file_perms;
 
 # proc info
-allow mtk_hal_power mtk_hal_audio:dir r_dir_perms;
+allow mtk_hal_power hal_audio_default:dir r_dir_perms;
 
 # Date : 2017/10/02
 # Operation: SQC
@@ -120,7 +123,7 @@ allow mtk_hal_power sysfs_devices_block:file rw_file_perms;
 # Date : 2019/05/22
 # Operation: SQC
 # Purpose : Allow powerHAL to access prop
-set_prop(mtk_hal_power, vendor_mtk_powerhal_prop)
+set_prop(mtk_hal_power, vendor_power_prop)
 
 # Date : 2019/05/29
 # Operation: SQC
