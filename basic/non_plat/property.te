@@ -25,6 +25,7 @@ vendor_internal_prop(vendor_mtk_wfc_serv_prop)
 vendor_internal_prop(vendor_mtk_factory_prop)
 vendor_internal_prop(vendor_mtk_factory_start_prop)
 vendor_internal_prop(vendor_mtk_eara_io_prop)
+vendor_internal_prop(vendor_power_prop)
 
 # Properties which can't be written outside vendor
 vendor_restricted_prop(vendor_mtk_aal_ro_prop)
@@ -34,6 +35,7 @@ vendor_restricted_prop(vendor_mtk_appresolutiontuner_prop)
 vendor_restricted_prop(vendor_mtk_atci_prop)
 vendor_restricted_prop(vendor_mtk_atm_ipaddr_prop)
 vendor_restricted_prop(vendor_mtk_atm_mdmode_prop)
+vendor_restricted_prop(vendor_mtk_audio_prop)
 vendor_restricted_prop(vendor_mtk_audiohal_prop)
 vendor_restricted_prop(vendor_mtk_bt_sap_enable_prop)
 vendor_restricted_prop(vendor_mtk_coredump_prop)
@@ -127,7 +129,6 @@ vendor_restricted_prop(vendor_debug_logger_prop)
 vendor_restricted_prop(vendor_mtk_crossmount_prop)
 vendor_restricted_prop(vendor_mtk_deinterlace_prop)
 vendor_restricted_prop(vendor_mtk_omx_core_prop)
-vendor_restricted_prop(vendor_mtk_hdr_video_prop)
 
 # Properties with can be read by all domains
 typeattribute vendor_mtk_aal_ro_prop                 mtk_core_property_type;
@@ -135,6 +136,7 @@ typeattribute vendor_mtk_anr_support_prop            mtk_core_property_type;
 typeattribute vendor_mtk_app_prop                    mtk_core_property_type;
 typeattribute vendor_mtk_appresolutiontuner_prop     mtk_core_property_type;
 typeattribute vendor_mtk_atci_prop                   mtk_core_property_type;
+typeattribute vendor_mtk_audio_prop                  mtk_core_property_type;
 typeattribute vendor_mtk_audiohal_prop               mtk_core_property_type;
 typeattribute vendor_mtk_bt_sap_enable_prop          mtk_core_property_type;
 typeattribute vendor_mtk_coredump_prop               mtk_core_property_type;
@@ -209,4 +211,3 @@ typeattribute vendor_debug_logger_prop               mtk_core_property_type;
 typeattribute vendor_mtk_crossmount_prop             mtk_core_property_type;
 typeattribute vendor_mtk_deinterlace_prop            mtk_core_property_type;
 typeattribute vendor_mtk_omx_core_prop               mtk_core_property_type;
-typeattribute vendor_mtk_hdr_video_prop              mtk_core_property_type;
